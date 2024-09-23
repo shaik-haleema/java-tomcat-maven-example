@@ -1,5 +1,6 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.example</groupId>
   <artifactId>java-tomcat-maven-example</artifactId>
@@ -7,6 +8,7 @@
   <version>1.0-SNAPSHOT</version>
   <name>hello Maven Webapp</name>
   <url>http://maven.apache.org</url>
+
   <dependencies>
     <dependency>
       <groupId>junit</groupId>
@@ -15,23 +17,36 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
     <finalName>java-tomcat-maven-example</finalName>
+
     <plugins>
+      <!-- Maven WAR Plugin for WAR packaging -->
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.3.2</version> <!-- Updated version -->
+      </plugin>
+
+      <!-- Maven Dependency Plugin to copy webapp-runner -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
-        <version>2.3</version>
+        <version>3.3.0</version> <!-- Updated version -->
         <executions>
           <execution>
+            <id>copy-webapp-runner</id>
             <phase>package</phase>
-            <goals><goal>copy</goal></goals>
+            <goals>
+              <goal>copy</goal>
+            </goals>
             <configuration>
               <artifactItems>
                 <artifactItem>
-                  <groupId>org.apache.maven.plugins</groupId>
+                  <groupId>com.github.jsimone</groupId>
                   <artifactId>webapp-runner</artifactId>
-                  <version>3.3.2</version>
+                  <version>9.0.30.0</version> <!-- Update this to the required version -->
                   <destFileName>webapp-runner.jar</destFileName>
                 </artifactItem>
               </artifactItems>
