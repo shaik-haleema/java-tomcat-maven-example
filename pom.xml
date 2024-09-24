@@ -42,15 +42,17 @@
             </plugin>
         </plugins>
     </build>
-         <distributionManagement>
+         
+<distributionManagement>
     <repository>
-        <id>maven-snapshots</id>
+        <id>maven-releases</id>
         <url>http://54.242.115.169:8081/repository/maven-snapshots/</url>
     </repository>
-    <snapshotRepository>
-        <id>maven-releases</id>
-        <url>http://54.242.115.169:8081/repository/maven-releases/</url>
-    </snapshotRepository>
 </distributionManagement>
+         
+<snapshotRepository>
+  <id>maven-snapshots</id>
+  <url>http://54.242.115.169:8081/repository/maven-snapshots/</url>
+</snapshotRepository>
 
 </project>
