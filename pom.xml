@@ -6,10 +6,15 @@
     <groupId>com.example</groupId>
     <artifactId>java-tomcat-maven-example</artifactId>
     <packaging>war</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <name>hello Maven Webapp</name>
     <url>http://maven.apache.org</url>
 
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+         
     <dependencies>
         <dependency>
             <groupId>junit</groupId>
@@ -44,15 +49,14 @@
     </build>
          
 <distributionManagement>
-    <repository>
-        <id>maven-releases</id>
-        <url>http://54.242.115.169:8081/repository/maven-snapshots/</url>
-    </repository>
+  <repository>
+    <id>maven-releases</id>
+    <url>http://54.242.115.169:8081/repository/maven-releases/</url>
+  </repository>
+  <snapshotRepository>
+    <id>maven-snapshots</id>
+    <url>http://54.242.115.169:8081/repository/maven-snapshots/</url>
+  </snapshotRepository>
 </distributionManagement>
-         
-<snapshotRepository>
-  <id>maven-snapshots</id>
-  <url>http://54.242.115.169:8081/repository/maven-snapshots/</url>
-</snapshotRepository>
 
 </project>
