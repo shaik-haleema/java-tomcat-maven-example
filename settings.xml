@@ -131,15 +131,15 @@ under the License.
       <passphrase>optional; leave empty if not used.</passphrase>
     </server>
     -->
-	<server>
-      <id>releasenexus</id>
+   <server>
+      <id>maven-releases</id>
       <username>admin</username>
-      <password>admin</password>
+      <password>admin123</password>
    </server>
-   	<server>
-      <id>snapshotnexus</id>
+   <server>
+      <id>maven-snapshots</id>
       <username>admin</username>
-      <password>admin</password>
+      <password>admin123</password>
    </server>
    
   </servers>
