@@ -131,15 +131,23 @@ under the License.
       <passphrase>optional; leave empty if not used.</passphrase>
     </server>
     -->
+      <?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
+    <!-- Your settings configuration goes here -->
+</settings>
+
+    
    <server>
       <id>maven-releases</id>
       <username>admin</username>
-      <password>admin</password>
+      <password>admin@123</password>
    </server>
    <server>
       <id>maven-snapshots</id>
       <username>admin</username>
-      <password>admin</password>
+      <password>admin@123</password>
    </server>
    
   </servers>
