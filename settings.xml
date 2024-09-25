@@ -136,10 +136,8 @@ under the License.
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 https://maven.apache.org/xsd/settings-1.2.0.xsd">
     <!-- Your settings configuration goes here -->
-</settings>
 
-    
-   <server>
+     <server>
       <id>maven-releases</id>
       <username>admin</username>
       <password>admin@123</password>
@@ -151,6 +149,10 @@ under the License.
    </server>
    
   </servers>
+</settings>
+
+    
+  
 
   <!-- mirrors
    | This is a list of mirrors to be used in downloading artifacts from remote repositories.
